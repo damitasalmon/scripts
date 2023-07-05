@@ -1,0 +1,1 @@
+Add-DistributionGroupMember –Identity "<ENTERGROUP>" –Member <EMTER EMAIL>
