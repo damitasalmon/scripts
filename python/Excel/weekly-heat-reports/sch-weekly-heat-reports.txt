@@ -3,6 +3,7 @@ schtasks /create /tn "TaskName" /tr "C:\...\....\....\.....\file.bat" /sc weekly
 == RUN AT LOGIN ==
 
 schtasks /create ^
-  /tn "CreateEmptyFolderOnLogin" ^
+  /tn "CreateWeeklyReportFolderOnLogin" ^
   /tr "C:\Users\%USERNAME%\Documents\scripts\run-weekly-heat-reports.bat" ^
-  /d MON /sc onlogon
+  /sc onlogon
+  /ru "%username%"

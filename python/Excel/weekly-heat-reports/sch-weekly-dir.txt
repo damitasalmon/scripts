@@ -5,4 +5,5 @@ schtasks /create /tn "TaskName" /tr "C:\...\....\....\.....\file.bat" /sc weekly
 schtasks /create ^
   /tn "RunERPHeatReports" ^
   /tr "C:\Users\%USERNAME%\Documents\scripts\run-mk-weekly-report-dir.bat" ^
-  /d THU /sc onlogon
+  /sc onlogon
+  /ru "%username%"
