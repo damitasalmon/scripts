@@ -1,0 +1,8 @@
+schtasks /create /tn "TaskName" /tr "C:\...\....\....\.....\file.bat" /sc weekly /d THU /st 05:00 /ru "%username%"
+
+== RUN AT LOGIN ==
+
+schtasks /create ^
+  /tn "CreateEmptyFolderOnLogin" ^
+  /tr "C:\Users\%USERNAME%\Documents\scripts\run-weekly-heat-reports.bat" ^
+  /d MON /sc onlogon

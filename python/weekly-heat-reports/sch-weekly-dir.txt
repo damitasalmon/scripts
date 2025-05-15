@@ -1,1 +1,0 @@
-schtasks /create /tn "TaskName" /tr "C:\...\....\....\.....\file.bat" /sc weekly /d MON /st 04:00 /ru "%username%"

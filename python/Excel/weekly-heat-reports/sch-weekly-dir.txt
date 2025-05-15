@@ -1,0 +1,8 @@
+schtasks /create /tn "TaskName" /tr "C:\...\....\....\.....\file.bat" /sc weekly /d MON /st 04:00 /ru "%username%"
+
+== RUN AT LOGIN ==
+
+schtasks /create ^
+  /tn "RunERPHeatReports" ^
+  /tr "C:\Users\%USERNAME%\Documents\scripts\run-mk-weekly-report-dir.bat" ^
+  /d THU /sc onlogon
